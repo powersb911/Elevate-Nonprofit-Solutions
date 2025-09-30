@@ -1,301 +1,94 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elevate Digital Solutions - Digital Business Consultant</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Elevate Digital - A Creative Web Studio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0a0a0a;
-            color: #e5e7eb; /* A light gray for better readability */
-        }
-        /* Custom gradient for hero section */
-        .hero-gradient {
-            background: radial-gradient(ellipse at top, rgba(79, 70, 229, 0.15), transparent 60%);
-        }
-        /* Custom gradient for other sections */
-        .section-gradient {
-            background: radial-gradient(ellipse at center, rgba(79, 70, 229, 0.1), transparent 70%);
-        }
-        /* Animation for elements fading in on scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Custom button hover effect */
-        .btn-hover-effect {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .btn-hover-effect:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
-        }
-        /* Underline animation for nav links */
-        .nav-link {
-            position: relative;
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: #fff;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 50%;
-            background-color: #6366f1;
-            transition: width 0.3s ease, left 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-            left: 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Header -->
-    <header class="fixed w-full bg-black/30 backdrop-blur-sm z-50 transition-all duration-300" id="header">
-        <div class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl font-bold text-white">Elevate Digital</a>
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#about" class="text-gray-300 nav-link">About</a>
-                    <a href="#services" class="text-gray-300 nav-link">Services</a>
-                    <a href="#portfolio" class="text-gray-300 nav-link">Portfolio</a>
-                </nav>
-                <a href="#contact" class="hidden md:inline-block bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg btn-hover-effect">
-                    Get In Touch
-                </a>
-                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#about" class="block py-2 text-gray-300">About</a>
-            <a href="#services" class="block py-2 text-gray-300">Services</a>
-            <a href="#portfolio" class="block py-2 text-gray-300">Portfolio</a>
-            <a href="#contact" class="block mt-2 bg-indigo-600 text-white font-semibold py-2 px-5 rounded-lg text-center">Get In Touch</a>
+    <svg width="0" height="0">
+        <defs>
+            <clipPath id="watercolor-mask" clipPathUnits="objectBoundingBox">
+                <path d="M0,0 H1 V0.02 C0.95,0.01,0.9,0.01,0.85,0.02 C0.79,0.03,0.73,0.02,0.67,0.04 C0.6,0.06,0.53,0.06,0.47,0.09 C0.4,0.12,0.33,0.13,0.27,0.17 C0.21,0.21,0.15,0.23,0.1,0.28 C0.05,0.33,0.02,0.38,0,0.42 V0 Z M0,1 H1 V0.98 C0.95,0.99,0.9,0.99,0.85,0.98 C0.79,0.97,0.73,0.98,0.67,0.96 C0.6,0.94,0.53,0.94,0.47,0.91 C0.4,0.88,0.33,0.87,0.27,0.83 C0.21,0.79,0.15,0.77,0.1,0.72 C0.05,0.67,0.02,0.62,0,0.58 V1 Z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="logo">Elevate</a>
+            <nav class="main-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center pt-24 pb-12 hero-gradient">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <!-- Text Content -->
-                    <div class="md:w-1/2 text-center md:text-left">
-                        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 fade-in">
-                            Elevate Your Digital Ecosystem
-                        </h1>
-                        <p class="text-lg md:text-xl text-gray-300 mb-8 fade-in" style="transition-delay: 0.2s;">
-                            I'm a Digital Business Consultant specializing in website design, holistic business planning, and maximizing your online impact. Let's harmonize your digital presence.
-                        </p>
-                        <div class="flex justify-center md:justify-start gap-4 fade-in" style="transition-delay: 0.4s;">
-                            <a href="#portfolio" class="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-lg btn-hover-effect">
-                                View My Work
-                            </a>
-                            <a href="#services" class="bg-gray-700 text-white font-semibold py-3 px-8 rounded-lg btn-hover-effect">
-                                Services
-                            </a>
-                        </div>
+        <section class="hero">
+            <div class="container">
+                <h1 class="reveal-text">Design that Inspires.</h1>
+                <p class="fade-in">We craft beautiful, purpose-driven websites that tell your story and elevate your mission.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container grid-layout">
+                <div class="about-image fade-in">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1974" alt="Team collaborating in a creative workspace">
+                </div>
+                <div class="about-content">
+                    <h2 class="reveal-text">Artistry Meets Strategy.</h2>
+                    <p class="fade-in">We are a design studio dedicated to helping nonprofits and mission-driven brands make a lasting impact. Our process is collaborative and creative, ensuring every detail is crafted with intention, from the first brushstroke to the final line of code.</p>
+                    <a href="#contact" class="cta-button fade-in">Let's Create Together</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <h2 class="section-title reveal-text">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-card fade-in">
+                        <div class="card-number">01</div>
+                        <h3>Brand Identity</h3>
+                        <p>Crafting a memorable brand story through logos, color palettes, and typography that resonates with your audience.</p>
                     </div>
-                    <!-- Image -->
-                    <div class="md:w-1/2 fade-in" style="transition-delay: 0.3s;">
-                        <div class="relative w-full max-w-sm mx-auto md:max-w-md">
-                            <div class="absolute inset-0 bg-indigo-500/30 rounded-full blur-3xl"></div>
-                             <img src="https://placehold.co/500x500/111827/FFFFFF?text=Your+Photo" alt="Portrait of a Digital Business Consultant" class="relative z-10 w-full rounded-full shadow-2xl border-4 border-gray-800">
-                        </div>
+                    <div class="service-card fade-in">
+                        <div class="card-number">02</div>
+                        <h3>Web Design</h3>
+                        <p>Designing intuitive, beautiful, and fully responsive websites that provide an exceptional user experience.</p>
+                    </div>
+                    <div class="service-card fade-in">
+                        <div class="card-number">03</div>
+                        <h3>Content Strategy</h3>
+                        <p>Developing compelling narratives and content plans that engage supporters and drive your mission forward.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section (Alternating Layout 1) -->
-        <section id="about" class="py-20 md:py-32 section-gradient">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16 fade-in">
-                    <!-- Image -->
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Consulting+in+Action" alt="A consultant working with a client" class="rounded-2xl shadow-xl w-full">
-                    </div>
-                    <!-- Text -->
-                    <div class="md:w-1/2">
-                        <span class="text-indigo-400 font-semibold">MY PHILOSOPHY</span>
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
-                            Managing your digital landscape
-                        </h2>
-                        <p class="text-gray-300 leading-relaxed mb-4">
-                            Many businesses have powerful digital tools, but they often operate in silos. A website here, a social media profile there, an SEO strategy somewhere else. My goal is to break down those silos.
-                        </p>
-                        <p class="text-gray-300 leading-relaxed">
-                            I harmonize your digital systems into a single, fully optimzed machine. By ensuring every part of your online presence works together, we create an ecosystem that is greater than the sum of its parts, delivering measurable results and sustainable growth.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services Section -->
-        <section id="services" class="py-20 md:py-32 bg-gray-900/50">
-            <div class="container mx-auto px-6 text-center">
-                <span class="text-indigo-400 font-semibold fade-in">WHAT I DO</span>
-                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-12 fade-in" style="transition-delay: 0.1s;">A Holistic Approach to Digital Success</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 fade-in" style="transition-delay: 0.2s;">
-                        <h3 class="text-xl font-bold text-white mb-3">Website Design & Dev</h3>
-                        <p class="text-gray-400">Crafting stunning, high-performance websites that serve as the central hub of your digital ecosystem.</p>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 fade-in" style="transition-delay: 0.3s;">
-                        <h3 class="text-xl font-bold text-white mb-3">SEO Optimization</h3>
-                        <p class="text-gray-400">Boosting your visibility on search engines to attract organic traffic and high-quality leads.</p>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 fade-in" style="transition-delay: 0.4s;">
-                        <h3 class="text-xl font-bold text-white mb-3">Google Business Profile</h3>
-                        <p class="text-gray-400">Optimizing your local presence to dominate local search and drive foot traffic.</p>
-                    </div>
-                    <!-- Service 4 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 text-left transform hover:-translate-y-2 transition-transform duration-300 fade-in" style="transition-delay: 0.5s;">
-                        <h3 class="text-xl font-bold text-white mb-3">Grant Writing</h3>
-                        <p class="text-gray-400">Securing funding to fuel your projects and accelerate your business growth through expertly crafted proposals.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Portfolio Section (Alternating Layout 2) -->
-        <section id="portfolio" class="py-20 md:py-32 section-gradient">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <span class="text-indigo-400 font-semibold fade-in">MY WORK</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 fade-in" style="transition-delay: 0.1s;">Case Studies in Digital Transformation</h2>
-                </div>
-                
-                <!-- Project 1 -->
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-20 fade-in">
-                    <!-- Text -->
-                    <div class="md:w-1/2 md:order-2">
-                        <h3 class="text-2xl font-bold text-white mb-3">E-commerce Revenue Growth</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
-                            For this client, we overhauled their website, implemented a targeted SEO strategy, and integrated their inventory system. The result was a 150% increase in online sales within six months.
-                        </p>
-                        <a href="#" target="_blank" class="text-indigo-400 font-semibold inline-flex items-center group">
-                            Visit Website
-                            <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                    <!-- Image -->
-                    <div class="md:w-1/2 md:order-1">
-                        <a href="#" class="block group">
-                           <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Project+Thumbnail+1" alt="Thumbnail for project 1" class="rounded-2xl shadow-xl w-full transform group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-16 fade-in">
-                    <!-- Image -->
-                    <div class="md:w-1/2">
-                        <a href="#" class="block group">
-                           <img src="https://placehold.co/600x400/1f2937/FFFFFF?text=Project+Thumbnail+2" alt="Thumbnail for project 2" class="rounded-2xl shadow-xl w-full transform group-hover:scale-105 transition-transform duration-300">
-                        </a>
-                    </div>
-                    <!-- Text -->
-                    <div class="md:w-1/2">
-                        <h3 class="text-2xl font-bold text-white mb-3">Local Service Lead Generation</h3>
-                        <p class="text-gray-300 leading-relaxed mb-6">
-                            By optimizing their Google Business Profile and local SEO, we were able to increase inbound phone calls by 300% and booking form submissions by 220% for this local service provider.
-                        </p>
-                        <a href="#" target="_blank" class="text-indigo-400 font-semibold inline-flex items-center group">
-                           View Case Study
-                           <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section id="contact" class="py-20 md:py-32 bg-gray-900/50">
-            <div class="container mx-auto px-6 text-center fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your Digital Future?</h2>
-                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
-                    Let's have a conversation about your goals and how we can achieve them together. Schedule a free, no-obligation consultation today.
-                </p>
-                <a href="mailto:your.email@example.com" class="bg-indigo-600 text-white font-bold py-4 px-10 rounded-lg btn-hover-effect text-lg">
-                    Schedule a Free Consultation
-                </a>
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <h2 class="reveal-text">Have a project in mind?</h2>
+                <p class="fade-in">We would love to hear about it. Let's work together to bring your vision to life.</p>
+                <a href="mailto:your.email@example.com" class="cta-button fade-in">Get in Touch</a>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900">
-        <div class="container mx-auto px-6 py-8">
-            <div class="flex flex-col md:flex-row items-center justify-between">
-                <p class="text-gray-400">&copy; 2024 Elevate Digital Solutions. All Rights Reserved.</p>
-                <div class="flex mt-4 md:mt-0 space-x-6">
-                    <!-- Replace with your actual social links -->
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"/></svg></a>
-                </div>
-            </div>
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Elevate Digital. All Rights Reserved.</p>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Add shadow to header on scroll
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                header.classList.add('shadow-lg');
-            } else {
-                header.classList.remove('shadow-lg');
-            }
-        });
-
-        // Fade-in elements on scroll
-        const fadeInElements = document.querySelectorAll('.fade-in');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                }
-            });
-        }, {
-            threshold: 0.1 // Trigger when 10% of the element is visible
-        });
-
-        fadeInElements.forEach(el => {
-            observer.observe(el);
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
